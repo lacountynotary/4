@@ -1,0 +1,519 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LA County Notary - Professional Mobile Notary Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c5c6ce",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeec",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "on-background": "#1a1c1b",
+                        "secondary-container": "#a0f3d9",
+                        "surface-bright": "#f9f9f7",
+                        "on-primary-fixed-variant": "#374765",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#84d6bd",
+                        "tertiary-fixed": "#ffddaf",
+                        "secondary": "#086b57",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "tertiary-fixed-dim": "#ffba44",
+                        "on-secondary-container": "#15715d",
+                        "on-tertiary-fixed": "#281800",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1b",
+                        "secondary-fixed": "#a0f3d9",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#8393b5",
+                        "surface-container-high": "#e8e8e6",
+                        "surface-container-low": "#f4f4f2",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#c4870a",
+                        "surface-tint": "#4f5e7e",
+                        "background": "#f9f9f7",
+                        "primary-container": "#1b2b48",
+                        "inverse-surface": "#2f3130",
+                        "inverse-primary": "#b7c7eb",
+                        "primary": "#041632",
+                        "outline": "#75777e",
+                        "on-primary-fixed": "#091b37",
+                        "on-surface-variant": "#44474d",
+                        "surface": "#f9f9f7",
+                        "inverse-on-surface": "#f1f1ef",
+                        "surface-dim": "#dadad8",
+                        "tertiary-container": "#3d2700",
+                        "surface-variant": "#e2e3e1",
+                        "surface-container-highest": "#e2e3e1",
+                        "primary-fixed-dim": "#b7c7eb",
+                        "tertiary": "#221400",
+                        "on-secondary-fixed-variant": "#005141",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#002019"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md-mobile": ["Source Serif 4"],
+                        "title-sm": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "label-serif": ["Source Serif 4"],
+                        "headline-md": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "title-sm": ["18px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-serif": ["14px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .dot-grid {
+            background-image: radial-gradient(circle, currentColor 1.5px, transparent 1.5px);
+            background-size: 8px 8px;
+        }
+        .geometric-accent {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        .active-link {
+            position: relative;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffba44;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg text-body-lg antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 w-full z-50 bg-primary shadow-md border-b-4 border-secondary">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto text-on-primary">
+<div class="font-display-lg text-[24px] md:text-display-lg font-extrabold tracking-tight">
+                LA County Notary
+            </div>
+<div class="hidden md:flex items-center gap-8 font-title-sm text-title-sm">
+<a class="text-secondary-fixed font-bold border-b-2 border-secondary-fixed pb-1" href="#">Home</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all" href="#services">Services</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all" href="#about">About</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all" href="#coverage">Coverage</a>
+<button class="bg-error text-white px-6 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:scale-95 transition-transform active:scale-90">Book Now</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-20 md:py-32 transition-all duration-700 opacity-100 translate-y-0">
+<!-- Geometric Accents -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed-dim rounded-full -mr-20 -mt-20 opacity-20"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary-fixed rounded-full -ml-32 -mb-32 opacity-30"></div>
+<div class="dot-grid text-primary/10 absolute top-12 left-12 w-24 h-12"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1 rounded-full border border-secondary/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<span class="font-title-sm text-xs uppercase tracking-widest">Bonded &amp; Insured Professional</span>
+</div>
+<h1 class="font-display-lg text-[40px] md:text-display-lg text-primary leading-tight">
+                        Mobile Notary Public <br>
+<span class="text-secondary italic">Serving Los Angeles County</span>
+</h1>
+<p class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface-variant max-w-lg">
+                        Reliable, certified notary services delivered directly to your doorstep, hospital, or office.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-full font-bold gap-3 hover:shadow-lg transition-shadow" href="tel:919-244-3997">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">call</span>
+                            919-244-3997
+                        </a>
+<a class="inline-flex items-center justify-center bg-error text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-shadow" href="#contact">
+                            Request Appointment
+                        </a>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="A professional top-down view of a modern legal workspace featuring a high-quality leather desk mat, a classic fountain pen resting on a signed document with a red wax seal, and a pair of professional reading glasses. The lighting is warm and authoritative, with deep navy and forest green accents in the decor reflecting a sense of trustworthiness and civic duty in a corporate modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEwdoG8nDiDZuuH1Kt9XMZBPwpUB49uKnK9upYCpCIJi3JDSg7DNC5-SNLMeT1iu-tf48QFNyLUzT3JHkx7ltOD4d9FKx8h2Zfn_CQSJEWwfEQ5otVV1XAgkhYNxGGvOgwLqNqwGCt5zPsU5bkr1gFvPypPZKIdiRGgV3PKZ2qehmbhiCoSMT2lyeIp2TdJi6_XoZXOHR905XFJlloPGj3__MZu3EKKleZXg2t0f24cA_pVwiV6k3rT8r3Xpn68U359dSFJaIGSs2W">
+</div>
+<!-- Decorative Element from Card -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-tertiary-fixed rounded-full z-20 flex items-center justify-center border-4 border-white">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">gavel</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Strip -->
+<section class="bg-primary text-on-primary py-12 relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-between items-center gap-8">
+<div class="flex items-center gap-4 border-l-4 border-tertiary-fixed pl-6">
+<div class="font-display-lg text-3xl">15+</div>
+<div class="font-title-sm text-sm opacity-70 uppercase tracking-tighter">Years of<br>Expertise</div>
+</div>
+<div class="flex items-center gap-4 border-l-4 border-secondary-fixed pl-6">
+<div class="font-display-lg text-3xl">24/7</div>
+<div class="font-title-sm text-sm opacity-70 uppercase tracking-tighter">Emergency<br>Availability</div>
+</div>
+<div class="flex items-center gap-4 border-l-4 border-error pl-6">
+<div class="font-display-lg text-3xl">100%</div>
+<div class="font-title-sm text-sm opacity-70 uppercase tracking-tighter">Bonded &amp;<br>Insured</div>
+</div>
+<div class="flex items-center gap-4 border-l-4 border-white pl-6">
+<div class="font-display-lg text-3xl">LA</div>
+<div class="font-title-sm text-sm opacity-70 uppercase tracking-tighter">Certified<br>County Wide</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 bg-surface-container-low relative transition-all duration-700 opacity-100 translate-y-0" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<span class="text-error font-title-sm text-xs uppercase tracking-[0.2em] block mb-2">Our Capabilities</span>
+<h2 class="font-display-lg text-primary">Notary Specializations</h2>
+</div>
+<p class="max-w-md font-label-serif text-lg italic text-on-surface-variant">
+                        "Precision in every signature, authority in every seal. Providing comprehensive legal document support across all of Los Angeles."
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group bg-white p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative overflow-hidden">
+<div class="dot-grid text-secondary/10 absolute top-4 right-4 w-12 h-6"></div>
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">commute</span>
+</div>
+<h3 class="font-display-lg text-2xl text-primary mb-4">Mobile Notary</h3>
+<p class="text-on-surface-variant mb-6">We travel to your location—home, office, or coffee shop—for maximum convenience and privacy.</p>
+<div class="w-full h-1 bg-secondary-fixed opacity-20 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-white p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative overflow-hidden">
+<div class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">assignment</span>
+</div>
+<h3 class="font-display-lg text-2xl text-primary mb-4">Loan Signing</h3>
+<p class="text-on-surface-variant mb-6">Certified Loan Signing Agent for mortgages, refinancing, and home equity lines of credit.</p>
+<div class="w-full h-1 bg-secondary-fixed opacity-20 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-white p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative overflow-hidden">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">history_edu</span>
+</div>
+<h3 class="font-display-lg text-2xl text-primary mb-4">POA &amp; Trusts</h3>
+<p class="text-on-surface-variant mb-6">Expert handling of Power of Attorney and Trust documents, ensuring legal compliance and accuracy.</p>
+<div class="w-full h-1 bg-secondary-fixed opacity-20 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Service Card 4 -->
+<div class="group bg-white p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative overflow-hidden">
+<div class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">domain</span>
+</div>
+<h3 class="font-display-lg text-2xl text-primary mb-4">Real Estate</h3>
+<p class="text-on-surface-variant mb-6">Support for commercial and residential real estate transactions, including deeds and titles.</p>
+<div class="w-full h-1 bg-secondary-fixed opacity-20 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Service Card 5 -->
+<div class="group bg-white p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative overflow-hidden">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">local_hospital</span>
+</div>
+<h3 class="font-display-lg text-2xl text-primary mb-4">Hospitals &amp; Jails</h3>
+<p class="text-on-surface-variant mb-6">Specialized visits to healthcare facilities and detention centers for urgent notarizations.</p>
+<div class="w-full h-1 bg-secondary-fixed opacity-20 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Service Card 6 -->
+<div class="group bg-white p-8 border border-outline-variant hover:border-secondary transition-all hover:shadow-xl relative overflow-hidden">
+<div class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+</div>
+<h3 class="font-display-lg text-2xl text-primary mb-4">Affidavits</h3>
+<p class="text-on-surface-variant mb-6">Verification and notarization of affidavits, declarations, and various sworn statements.</p>
+<div class="w-full h-1 bg-secondary-fixed opacity-20 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet the Notary Section -->
+<section class="py-24 bg-white overflow-hidden transition-all duration-700 opacity-100 translate-y-0" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="relative z-10 p-4 border-4 border-primary">
+<img class="w-full h-[500px] object-cover" data-alt="A professional portrait of Hari Sankar Jandhyala, a middle-aged South Asian man with a warm, confident smile, wearing a sharp navy blue business suit. He is standing in a brightly lit, modern office environment with blurred glass partitions and architectural lines. The image is crisp and clean, reflecting a high-end corporate aesthetic with a focus on trust and approachability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwsmMVjGbeQ3sHasXkF4vfKbdZZrRdfRN8CKYqccDhXOBaguY3yis40_HRqOebEtExRBzBxOdK4PSlMsUltXzLU0iNHowINwaFKy0elJ3W8k6sA_AFDm87Xsh1Pk3-FRwTTdHmjTNsOdWLUi4dkzBOLyBdral90vxSkX82H9mpHA8COoDxh1R3yPanSSS9wKgfbrgziTg6iX3q0DflUD6522M-YLMc3Oox4ArWMB7LMCLz1788wL-jbf-0V08AouDeNY41QaR2BTE1">
+</div>
+<!-- Overlapping Circle Accents -->
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary rounded-full opacity-10"></div>
+<div class="absolute -bottom-12 -right-12 w-32 h-32 bg-tertiary-fixed rounded-full"></div>
+<div class="dot-grid text-primary absolute -bottom-6 -left-6 w-12 h-24 opacity-20"></div>
+</div>
+<div class="space-y-8">
+<div>
+<span class="text-secondary font-title-sm text-sm uppercase tracking-widest block mb-4">Your Commissioned Official</span>
+<h2 class="font-display-lg text-primary text-4xl md:text-5xl mb-6">Meet Hari Sankar Jandhyala</h2>
+<p class="font-headline-md text-on-surface-variant mb-6">
+                                Professional. Reliable. Bonded.
+                            </p>
+</div>
+<div class="space-y-4 font-body-lg text-on-surface text-lg">
+<p class="">As a commissioned Notary Public for the State of California (Commission #2548649), I provide mobile services across the greater Los Angeles area with a commitment to integrity and meticulous attention to detail.</p>
+<p class="">My goal is to make the notarization process as seamless as possible, understanding that many of these documents represent major life milestones or critical legal requirements.</p>
+</div>
+<div class="grid grid-cols-2 gap-6 pt-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">verified_user</span>
+<span class="font-title-sm text-sm">Certified NNA</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">shield</span>
+<span class="font-title-sm text-sm">E&amp;O Insured</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Coverage Area & Map -->
+<section class="py-24 bg-surface-container-high relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0" id="coverage">
+<div class="absolute inset-0 z-0 opacity-5">
+<div class="dot-grid text-primary w-full h-full"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-primary mb-4">Areas We Serve</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Providing comprehensive mobile notary coverage throughout Los Angeles County and surrounding areas. We come to you!</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-stretch">
+<div class="md:col-span-4 bg-primary text-on-primary p-10 space-y-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary opacity-20 rounded-full -mr-16 -mt-16"></div>
+<h3 class="font-display-lg text-2xl relative z-10">Priority Districts</h3>
+<ul class="space-y-4 relative z-10">
+<li class="flex items-center gap-3 border-b border-on-primary/20 pb-3">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+<span class="">Downtown Los Angeles</span>
+</li>
+<li class="flex items-center gap-3 border-b border-on-primary/20 pb-3">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+<span class="">Pasadena &amp; Altadena</span>
+</li>
+<li class="flex items-center gap-3 border-b border-on-primary/20 pb-3">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+<span class="">Burbank &amp; Glendale</span>
+</li>
+<li class="flex items-center gap-3 border-b border-on-primary/20 pb-3">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+<span class="">Santa Monica &amp; Culver City</span>
+</li>
+<li class="flex items-center gap-3 border-b border-on-primary/20 pb-3">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+<span class="">Long Beach &amp; South Bay</span>
+</li>
+</ul>
+<div class="pt-4">
+<p class="font-label-serif italic text-sm opacity-80">Don't see your area? Give us a call, we likely serve your location too.</p>
+</div>
+</div>
+<div class="md:col-span-8 h-[400px] md:h-auto overflow-hidden border-8 border-white shadow-lg">
+<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A high-contrast architectural shot of a sleek modern skyscraper in Downtown Los Angeles reflecting the golden California sunset. The composition uses strong geometric lines and a deep blue sky background, maintaining the professional corporate modern aesthetic. The image is clean and vibrant, showcasing the urban environment where the mobile notary service operates." data-location="Los Angeles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdftDWtd2ASn0BFr5J9Nu6e6o8M3KZacfm9DbYuBVM437scWESxxn-zCRvc9XfjSY091FFYVIDeANU0KvIyAPw5bvAeLrTo3K7x8NRuRFZ-o2GpRO1C8D_xW11BPDqswypseDMpACwWWF1JPFwSkjNteUaE4BmKs6KCkv07QW9nKX23rUqSRbMCTHvar7P7D4SJbicorxsA-R2fM52Hl0At0EVn4muIyfdcmvyxHOQMDqq73g7416vSM2tHe5kurcC9EIHUHntdt4D">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+
+<!-- Contact & Booking -->
+<section class="py-24 bg-primary text-on-primary relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0" id="contact">
+<div class="absolute top-0 left-0 w-full h-full z-0 opacity-10">
+<div class="dot-grid text-white w-full h-full"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-display-lg text-4xl md:text-5xl mb-6">Schedule Your <br><span class="text-secondary-fixed">Mobile Notary</span> Appointment</h2>
+<p class="text-on-primary opacity-80 mb-12 text-lg">Ready to notarize? Fill out the form or call us directly. We respond to all inquiries within 30 minutes.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-6 group" href="tel:919-244-3997">
+<div class="w-14 h-14 bg-secondary-fixed-dim rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">call</span>
+</div>
+<div>
+<div class="text-sm opacity-60 uppercase font-bold tracking-widest">Phone Number</div>
+<div class="text-2xl font-display-lg">919-244-3997</div>
+</div>
+</a>
+<a class="flex items-center gap-6 group" href="mailto:harisankar.jandhyala@yahoo.com">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">mail</span>
+</div>
+<div>
+<div class="text-sm opacity-60 uppercase font-bold tracking-widest">Email Address</div>
+<div class="text-xl font-display-lg">harisankar.jandhyala@yahoo.com</div>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 shadow-2xl relative">
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-error rounded-full"></div>
+<form class="space-y-6 text-primary">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-serif text-sm font-bold block">Your Name</label>
+<input class="w-full border-2 border-surface-container focus:border-secondary p-3 focus:outline-none transition-colors" placeholder="Full Name" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-serif text-sm font-bold block">Phone Number</label>
+<input class="w-full border-2 border-surface-container focus:border-secondary p-3 focus:outline-none transition-colors" placeholder="(555) 000-0000" type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-serif text-sm font-bold block">Service Requested</label>
+<select class="w-full border-2 border-surface-container focus:border-secondary p-3 focus:outline-none transition-colors">
+<option>Standard Notarization</option>
+<option>Loan Signing</option>
+<option>Hospital Visit</option>
+<option>Power of Attorney</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-serif text-sm font-bold block">Meeting Location (City/Zip)</label>
+<input class="w-full border-2 border-surface-container focus:border-secondary p-3 focus:outline-none transition-colors" placeholder="e.g. Pasadena, 91101" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-serif text-sm font-bold block">Message / Details</label>
+<textarea class="w-full border-2 border-surface-container focus:border-secondary p-3 focus:outline-none transition-colors" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-error text-white font-bold py-4 rounded-none hover:bg-opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
+                                Send Request
+                                <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-12 border-t-8 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-lg text-secondary-fixed text-3xl">LA County Notary</div>
+<p class="font-body-sm text-body-sm opacity-70 leading-relaxed">
+                    Dedicated to providing mobile notary solutions that are as flexible as they are legal. Serving all of Los Angeles County with professional integrity since 2010.
+                </p>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded bg-on-primary/10 flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">face_nod</span>
+</div>
+<div class="w-8 h-8 rounded bg-on-primary/10 flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-title-sm text-white uppercase tracking-[0.2em]">Quick Navigation</h4>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed underline transition-all" href="#">Home</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed underline transition-all" href="#services">Services</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed underline transition-all" href="#coverage">Coverage Areas</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed underline transition-all" href="#">Notary Law</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed underline transition-all" href="#contact">Contact Us</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-title-sm text-white uppercase tracking-[0.2em]">Legal &amp; Compliance</h4>
+<div class="p-6 bg-on-primary/5 border border-on-primary/10 space-y-4">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">verified</span>
+<div class="text-sm">Commission #2548649</div>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">calendar_today</span>
+<div class="text-sm">Expires Feb 24, 2030</div>
+</div>
+<p class="text-xs opacity-50 italic">© 2024 LA County Notary Services. All Rights Reserved. Bonded &amp; Insured for your protection.</p><p class="text-xs opacity-50 italic mt-2">Made for LAcountyNotary by SVJ inc</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-8 border-t border-on-primary/10 text-center">
+<p class="font-body-sm text-body-sm opacity-50">Hari Sankar Jandhyala - Professional Mobile Notary Public</p>
+</div>
+</footer>
+<!-- Fixed FAB for Mobile -->
+<a class="fixed bottom-6 right-6 md:hidden w-16 h-16 bg-error text-white rounded-full shadow-2xl flex items-center justify-center z-50 animate-bounce" href="tel:919-244-3997">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">call</span>
+</a>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Smooth reveal for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+
+
+</body></html>
